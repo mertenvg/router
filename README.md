@@ -1,22 +1,22 @@
 # router
 A simple http router
 
-#usage
+## usage
 ```go
 package main
 
 import (
-	"fmt"
-	"net/http"
-	
-	"github.com/whitecypher/router"
+    "fmt"  
+    "net/http"
+
+    "github.com/whitecypher/router"
 )
 
 func main() {
-	// create the router
-	r := router.New()
-	
-	// add some middleware
+    // create the router
+    r := router.New()
+
+    // add some middleware
     r.Middleware(
         func(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
         		ra := r.RemoteAddr
